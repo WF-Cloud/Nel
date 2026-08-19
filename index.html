@@ -192,12 +192,22 @@
     grid-template-columns:repeat(4, 1fr);
     grid-auto-rows:130px;
   }
-  .photo-slot{
-    display:flex; align-items:center; justify-content:center;
-    background:var(--blush-2) center/cover no-repeat;
-    border:1.5px dashed var(--rose-soft); cursor:pointer; color:var(--rose);
-    font-size:1.9rem; font-weight:300; position:relative; overflow:hidden;
-    border-radius:6px;
+  .photo-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blush-2);
+    border: 1.5px dashed var(--rose-soft);
+    color: var(--rose);
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .photo-slot img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .photo-slot input{position:absolute; inset:0; opacity:0; cursor:pointer;}
   .photo-slot.filled{border-style:solid;}
@@ -246,6 +256,32 @@
     to{transform:translateY(110vh) rotate(360deg); opacity:0;}
   }
 
+  .future-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.3);
+  }
+
+  .future-message {
+    padding: 20px;
+    opacity: 0.65;
+  }
+
+  .future-message span {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .future-message p {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
   footer{
     text-align:center; margin-top:70px; font-size:.8rem; color:var(--rose); opacity:.6; font-style:italic;
   }
@@ -267,6 +303,8 @@
     .invite-btns{flex-direction:row; flex-wrap:wrap;}
     .wish-card{padding:36px 22px;}
   }
+
+
 </style>
 </head>
 <body>
@@ -362,44 +400,63 @@
     <button class="back-btn" data-back><span class="arrow">←</span> Home</button>
     <p class="eyebrow">our little archive</p>
     <h1 class="title-xl" style="font-size:clamp(2rem,5vw,2.8rem);">Our Moments</h1>
-    <p class="subtitle">Fill these in with the pictures that tell our story so far.</p>
-    <div class="mosaic">
-      <div class="photo-slot m1">
-        <img src="images/photo1.jpg" alt="Our moment">
-      </div>
+    <p class="subtitle">Memories of our pictures together (Don't worry we'll slowly add more).</p>
 
-      <div class="photo-slot m2">
-        <img src="images/photo2.jpg" alt="Our moment">
-      </div>
+  <div class="mosaic">
 
-      <div class="photo-slot m3">
-        <img src="images/photo3.jpg" alt="Our moment">
-      </div>
+    <!-- Existing memory -->
+    <div class="photo-slot m1">
+      <img src="images/Mirror2.jpeg" alt="Our moment">
+    </div>
 
-      <div class="photo-slot m4">
-        <img src="images/photo4.jpg" alt="Our moment">
-      </div>
+    <!-- Existing memory -->
+    <div class="photo-slot m1">
+      <img src="images/IpadSS.jpeg" alt="Our moment1">
+    </div>
 
-      <div class="photo-slot m5">
-        <img src="images/photo5.jpg" alt="Our moment">
-      </div>
-
-      <div class="photo-slot m6">
-        <img src="images/photo6.jpg" alt="Our moment">
-      </div>
-
-      <div class="photo-slot m7">
-        <img src="images/photo7.jpg" alt="Our moment">
-      </div>
-
-      <div class="photo-slot m8">
-        <img src="images/photo8.jpg" alt="Our moment">
-      </div>
-
-      <div class="photo-slot m3">
-        <img src="images/photo8.jpg" alt="Our moment">
+    <!-- Future memory -->
+    <div class="photo-slot m3 future-photo">
+      <div class="future-message">
+        <span>♡</span>
+        <p>A spot for our next memory...</p>
       </div>
     </div>
+
+    <!-- Existing memory -->
+    <div class="photo-slot m4">
+      <img src="images/Parking.jpeg" alt="Our moment2">
+    </div>
+
+    <!-- Future memory -->
+    <div class="photo-slot m5 future-photo">
+      <div class="future-message">
+        <span>♡</span>
+        <p>Something wonderful belongs here.</p>
+      </div>
+    </div>
+
+    <!-- Existing memory -->
+    <div class="photo-slot m6">
+      <img src="images/Call2.jpeg" alt="Our moment3">
+    </div>
+
+    <!-- Future memory -->
+    <div class="photo-slot m7 future-photo">
+      <div class="future-message">
+        <span>♡</span>
+        <p>To be filled with another memory...</p>
+      </div>
+    </div>
+
+    <!-- Future memory -->
+    <div class="photo-slot m8 future-photo">
+      <div class="future-message">
+        <span>♡</span>
+        <p>Our story isn't finished yet.</p>
+      </div>
+    </div>
+
+  </div>
   </section>
 
   <!-- DATE NIGHT PAGE -->
